@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+//    add the list of questions
+    let questions = [
+        "three minus two is one",
+        "two is larger than one",
+        "ten is smaller than five"
+    ]
     
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
@@ -21,6 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        get one question from the questions array
+        questionText.text = questions[0]
     }
 
 
