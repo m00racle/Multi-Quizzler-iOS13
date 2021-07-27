@@ -13,24 +13,44 @@ class ViewController: UIViewController {
     let questions = [
         "three minus two is one",
         "two is larger than one",
-        "ten is smaller than five"
+        "ten is smaller than five",
+        "twenty divided by two is five",
+        "zero is positive"
     ]
+    
+//    hard coded the questions index locator
+    var questionNumber = 0
     
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
     @IBAction func trueButtonPressed(_ sender: Any) {
+        if questionNumber <= (questions.count - 2) {
+            questionNumber += 1
+        } else {
+            questionNumber = 0
+        }
+        updateUI()
     }
     
     @IBAction func falseButtonPressed(_ sender: Any) {
+        if questionNumber <= (questions.count - 2) {
+            questionNumber += 1
+        } else {
+            questionNumber = 0
+        }
+        updateUI()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 //        get one question from the questions array
-        questionText.text = questions[0]
+        updateUI()
     }
-
-
+    
+    func updateUI()  {
+        questionText.text = questions[questionNumber]
+    }
 }
 
