@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76FB089726B35DDA0015CEBC /* Quizzler_iOS13UI_Buttons_Interaction_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FB089626B35DDA0015CEBC /* Quizzler_iOS13UI_Buttons_Interaction_Tests.swift */; };
 		AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */; };
 		AD4BDE4C22D878BA005BA4CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */; };
 		AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4D22D878BA005BA4CC /* ViewController.swift */; };
@@ -16,7 +17,20 @@
 		AD7631B622F9851900C6E71B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD7631B522F9851900C6E71B /* README.md */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		76FB089926B35DDA0015CEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD4BDE3E22D878BA005BA4CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD4BDE4522D878BA005BA4CC;
+			remoteInfo = "Quizzler-iOS13";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		76FB089426B35DDA0015CEBC /* Quizzler-iOS13UI-Buttons-Interaction-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quizzler-iOS13UI-Buttons-Interaction-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76FB089626B35DDA0015CEBC /* Quizzler_iOS13UI_Buttons_Interaction_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizzler_iOS13UI_Buttons_Interaction_Tests.swift; sourceTree = "<group>"; };
+		76FB089826B35DDA0015CEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quizzler-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		76FB089126B35DDA0015CEBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD4BDE4322D878BA005BA4CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,11 +60,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76FB089526B35DDA0015CEBC /* Quizzler-iOS13UI-Buttons-Interaction-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				76FB089626B35DDA0015CEBC /* Quizzler_iOS13UI_Buttons_Interaction_Tests.swift */,
+				76FB089826B35DDA0015CEBC /* Info.plist */,
+			);
+			path = "Quizzler-iOS13UI-Buttons-Interaction-Tests";
+			sourceTree = "<group>";
+		};
 		AD4BDE3D22D878BA005BA4CC = {
 			isa = PBXGroup;
 			children = (
 				AD7631B522F9851900C6E71B /* README.md */,
 				AD4BDE4822D878BA005BA4CC /* Quizzler-iOS13 */,
+				76FB089526B35DDA0015CEBC /* Quizzler-iOS13UI-Buttons-Interaction-Tests */,
 				AD4BDE4722D878BA005BA4CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */,
+				76FB089426B35DDA0015CEBC /* Quizzler-iOS13UI-Buttons-Interaction-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +105,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		76FB089326B35DDA0015CEBC /* Quizzler-iOS13UI-Buttons-Interaction-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76FB089D26B35DDA0015CEBC /* Build configuration list for PBXNativeTarget "Quizzler-iOS13UI-Buttons-Interaction-Tests" */;
+			buildPhases = (
+				76FB089026B35DDA0015CEBC /* Sources */,
+				76FB089126B35DDA0015CEBC /* Frameworks */,
+				76FB089226B35DDA0015CEBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76FB089A26B35DDA0015CEBC /* PBXTargetDependency */,
+			);
+			name = "Quizzler-iOS13UI-Buttons-Interaction-Tests";
+			productName = "Quizzler-iOS13UI-Buttons-Interaction-Tests";
+			productReference = 76FB089426B35DDA0015CEBC /* Quizzler-iOS13UI-Buttons-Interaction-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		AD4BDE4522D878BA005BA4CC /* Quizzler-iOS13 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD4BDE5A22D878BC005BA4CC /* Build configuration list for PBXNativeTarget "Quizzler-iOS13" */;
@@ -96,10 +146,14 @@
 		AD4BDE3E22D878BA005BA4CC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "The App Brewery";
 				TargetAttributes = {
+					76FB089326B35DDA0015CEBC = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = AD4BDE4522D878BA005BA4CC;
+					};
 					AD4BDE4522D878BA005BA4CC = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -119,11 +173,19 @@
 			projectRoot = "";
 			targets = (
 				AD4BDE4522D878BA005BA4CC /* Quizzler-iOS13 */,
+				76FB089326B35DDA0015CEBC /* Quizzler-iOS13UI-Buttons-Interaction-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		76FB089226B35DDA0015CEBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD4BDE4422D878BA005BA4CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +200,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		76FB089026B35DDA0015CEBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76FB089726B35DDA0015CEBC /* Quizzler_iOS13UI_Buttons_Interaction_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD4BDE4222D878BA005BA4CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +219,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76FB089A26B35DDA0015CEBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD4BDE4522D878BA005BA4CC /* Quizzler-iOS13 */;
+			targetProxy = 76FB089926B35DDA0015CEBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AD4BDE4F22D878BA005BA4CC /* Main.storyboard */ = {
@@ -170,6 +248,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		76FB089B26B35DDA0015CEBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Quizzler-iOS13UI-Buttons-Interaction-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m00racle.Quizzler-iOS13UI-Buttons-Interaction-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Quizzler-iOS13";
+			};
+			name = Debug;
+		};
+		76FB089C26B35DDA0015CEBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Quizzler-iOS13UI-Buttons-Interaction-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m00racle.Quizzler-iOS13UI-Buttons-Interaction-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Quizzler-iOS13";
+			};
+			name = Release;
+		};
 		AD4BDE5822D878BC005BA4CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,6 +439,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		76FB089D26B35DDA0015CEBC /* Build configuration list for PBXNativeTarget "Quizzler-iOS13UI-Buttons-Interaction-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76FB089B26B35DDA0015CEBC /* Debug */,
+				76FB089C26B35DDA0015CEBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AD4BDE4122D878BA005BA4CC /* Build configuration list for PBXProject "Quizzler-iOS13" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
