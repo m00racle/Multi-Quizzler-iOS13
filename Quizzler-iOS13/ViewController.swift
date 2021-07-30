@@ -25,21 +25,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     
     @IBAction func trueButtonPressed(_ sender: Any) {
-        if questionNumber <= (questions.count - 2) {
-            questionNumber += 1
-        } else {
-            questionNumber = 0
-        }
-        updateUI()
+        nextQuestion()
     }
     
     @IBAction func falseButtonPressed(_ sender: Any) {
-        if questionNumber <= (questions.count - 2) {
-            questionNumber += 1
-        } else {
-            questionNumber = 0
-        }
-        updateUI()
+        nextQuestion()
     }
     
     override func viewDidLoad() {
@@ -51,6 +41,15 @@ class ViewController: UIViewController {
     
     func updateUI()  {
         questionText.text = questions[questionNumber]
+    }
+    
+    func nextQuestion()  {
+        if questionNumber <= (questions.count - 2) {
+            questionNumber += 1
+        } else {
+            questionNumber = 0
+        }
+        updateUI()
     }
 }
 
