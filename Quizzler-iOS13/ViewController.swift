@@ -11,11 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 //    add the list of questions
     let questions = [
-        "three minus two is one",
-        "two is larger than one",
-        "ten is smaller than five",
-        "twenty divided by two is five",
-        "zero is positive"
+        ["three minus two is one", true],
+        ["two is larger than one", true],
+        ["ten is smaller than five", true],
+        ["twenty divided by two is five", false],
+        ["zero is positive", false]
     ]
     
 //    hard coded the questions index locator
@@ -40,11 +40,11 @@ class ViewController: UIViewController {
     }
     
     func updateUI()  {
-        questionText.text = questions[questionNumber]
+        questionText.text = questions[questionNumber][0] as? String
     }
     
     func nextQuestion()  {
-        if questionNumber <= (questions.count - 2) {
+        if questionNumber + 1 < questions.count {
             questionNumber += 1
         } else {
             questionNumber = 0
