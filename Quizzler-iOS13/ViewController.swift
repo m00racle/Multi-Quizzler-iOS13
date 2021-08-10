@@ -10,13 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 //    add the list of questions
+//    Build struct for Puzzle
+    struct Question {
+        var asking : String
+        var answer : Bool
+    }
+//    make Question instance
     let questions = [
-        ["three minus two is one", true],
-        ["two is larger than one", true],
-        ["ten is smaller than five", true],
-        ["twenty divided by two is five", false],
-        ["zero is positive", false]
+        Question(asking: "three minus two is one", answer: true),
+        Question(asking: "two is larger than one", answer: true),
+        Question(asking: "ten is smaller than five", answer: true),
+        Question(asking: "twenty divided by two is five", answer: false),
+        Question(asking: "zero is positive", answer: false)
     ]
+    
+//    make the list of questions structs
     
 //    hard coded the questions index locator
     var questionNumber = 0
@@ -40,7 +48,9 @@ class ViewController: UIViewController {
     }
     
     func updateUI()  {
-        questionText.text = questions[questionNumber][0] as? String
+        questionText.text = questions[questionNumber].asking
+//        TEST: print each question answer:
+        print(questions[questionNumber].answer)
     }
     
     func nextQuestion()  {
