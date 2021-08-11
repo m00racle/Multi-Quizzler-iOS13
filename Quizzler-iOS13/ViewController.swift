@@ -10,18 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 //    add the list of questions
-//    Build struct for Puzzle
-    struct Question {
-        var asking : String
-        var answer : Bool
-    }
+
 //    make Question instance
     let questions = [
-        Question(asking: "three minus two is one", answer: true),
-        Question(asking: "two is larger than one", answer: true),
-        Question(asking: "ten is smaller than five", answer: true),
-        Question(asking: "twenty divided by two is five", answer: false),
-        Question(asking: "zero is positive", answer: false)
+        Question(q: "three minus two is one", a: true),
+        Question(q: "two is larger than one", a: true),
+        Question(q: "ten is smaller than five", a: true),
+        Question(q: "twenty divided by two is five", a: false),
+        Question(q: "zero is positive", a: false)
     ]
     
 //    make the list of questions structs
@@ -33,10 +29,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     
     @IBAction func trueButtonPressed(_ sender: Any) {
+        checkAnswer(input: true)
         nextQuestion()
     }
     
     @IBAction func falseButtonPressed(_ sender: Any) {
+        checkAnswer(input: false)
         nextQuestion()
     }
     
@@ -50,7 +48,7 @@ class ViewController: UIViewController {
     func updateUI()  {
         questionText.text = questions[questionNumber].asking
 //        TEST: print each question answer:
-        print(questions[questionNumber].answer)
+        print("answer: ", questions[questionNumber].answer)
     }
     
     func nextQuestion()  {
@@ -60,6 +58,14 @@ class ViewController: UIViewController {
             questionNumber = 0
         }
         updateUI()
+    }
+    
+    func checkAnswer(input:Bool) {
+        if input == questions[questionNumber].answer {
+            print("input is correct")
+        } else {
+            print("input is wrong")
+        }
     }
 }
 
