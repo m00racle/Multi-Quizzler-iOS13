@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 //    add the list of questions
 
 //    make Question instance
+//    TODO PROBLEM see this example:
+//    Question(q: "A slug's blood is green.", a: "True"),
+//    the Question example in the README.md we supposed to use has answer type String not Boolean. 
     let questions = [
         Question(q: "three minus two is one", a: true),
         Question(q: "two is larger than one", a: true),
@@ -47,8 +50,6 @@ class ViewController: UIViewController {
     
     func updateUI()  {
         questionText.text = questions[questionNumber].asking
-//        TEST: print each question answer:
-        print("answer: ", questions[questionNumber].answer)
     }
     
     func nextQuestion()  {
