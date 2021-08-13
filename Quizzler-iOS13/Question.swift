@@ -11,10 +11,10 @@ import Foundation
 //    Build struct for Puzzle
     struct Question {
         var asking : String
-        var answer : Bool
+        var answer : String
         
 //        initialize
-        init(q:String, a:Bool){
+        init(q:String, a:String){
             asking = q
             answer = a
         }
