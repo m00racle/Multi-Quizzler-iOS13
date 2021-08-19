@@ -88,8 +88,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="falseButton" destination="tbn-vQ-GyC" id="iOn-Mb-RJd"/>
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="Onh-ai-4b2"/>
                         <outlet property="questionText" destination="rSI-li-mhO" id="8kg-aG-nc6"/>
+                        <outlet property="trueButton" destination="oVw-Hl-IRe" id="UTM-yy-BWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

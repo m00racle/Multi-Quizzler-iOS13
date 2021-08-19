@@ -32,16 +32,22 @@ class ViewController: UIViewController {
 //    hard coded the questions index locator
     var questionNumber = 0
     
+    @IBOutlet weak var trueButton: UIButton!
+    @IBOutlet weak var falseButton: UIButton!
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
     @IBAction func trueButtonPressed(_ sender: Any) {
-        checkAnswer(input: "True")
+        if checkAnswer(input: "True"){
+            trueButton.backgroundColor = UIColor.green
+        } else {trueButton.backgroundColor = UIColor.red}
         nextQuestion()
     }
     
     @IBAction func falseButtonPressed(_ sender: Any) {
-        checkAnswer(input: "False")
+        if checkAnswer(input: "False") {
+            falseButton.backgroundColor = UIColor.green
+        } else {falseButton.backgroundColor = UIColor.red}
         nextQuestion()
     }
     
@@ -52,8 +58,10 @@ class ViewController: UIViewController {
         updateUI()
     }
     
-    func updateUI()  {
+    @objc func updateUI()  {
         questionText.text = questions[questionNumber].asking
+        trueButton.backgroundColor = UIColor.clear
+        falseButton.backgroundColor = UIColor.clear
     }
     
     func nextQuestion()  {
@@ -62,14 +70,14 @@ class ViewController: UIViewController {
         } else {
             questionNumber = 0
         }
-        updateUI()
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
-    func checkAnswer(input:String) {
+    func checkAnswer(input:String) -> Bool {
         if input == questions[questionNumber].answer {
-            print("input is correct")
+            return true
         } else {
-            print("input is wrong")
+            return false
         }
     }
 }
