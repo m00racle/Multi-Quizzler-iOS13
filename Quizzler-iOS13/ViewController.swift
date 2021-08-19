@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         updateUI()
     }
     
-    @objc func updateUI()  {
+    func updateUI()  {
         questionText.text = questions[questionNumber].asking
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
@@ -70,7 +70,8 @@ class ViewController: UIViewController {
         } else {
             questionNumber = 0
         }
-        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+
+        _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: {_ in self.updateUI()})
     }
     
     func checkAnswer(input:String) -> Bool {
