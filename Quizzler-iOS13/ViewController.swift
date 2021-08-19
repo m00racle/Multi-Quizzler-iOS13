@@ -62,6 +62,9 @@ class ViewController: UIViewController {
         questionText.text = questions[questionNumber].asking
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
+//        update progress
+//        NOTE: use questionNumber + 1 since index is starting from 0 not 1!
+        progressBar.progress = Float(questionNumber + 1)/Float(questions.count)
     }
     
     func nextQuestion()  {
@@ -70,7 +73,7 @@ class ViewController: UIViewController {
         } else {
             questionNumber = 0
         }
-
+//        make somw delay to see the button interaction
         _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: {_ in self.updateUI()})
     }
     
