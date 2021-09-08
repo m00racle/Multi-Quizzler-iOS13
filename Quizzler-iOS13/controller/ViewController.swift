@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     @IBAction func trueButtonPressed(_ sender: Any) {
         if quizCenter.checkAnswer(input: "True"){
             trueButton.backgroundColor = UIColor.green
@@ -46,6 +48,8 @@ class ViewController: UIViewController {
     }
     
     func updateUI()  {
+        let score = quizCenter.getScore()
+        scoreLabel.text = "score: " + String(score)
         questionText.text = quizCenter.questions[quizCenter.questionNumber].asking
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear

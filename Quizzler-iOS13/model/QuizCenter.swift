@@ -29,19 +29,26 @@ struct QuizCenter {
 //    set the question number
     //    hard coded the questions index locator
         var questionNumber = 0
+        private var score = 0
     
-    func checkAnswer(input:String) -> Bool {
+    mutating func checkAnswer(input:String) -> Bool {
         if input == questions[questionNumber].answer {
+            score += 1
             return true
         } else {
             return false
         }
     }
     
+    func getScore() -> Int {
+        return score
+    }
+    
     mutating func nextQuestion()  {
         if questionNumber + 1 < questions.count {
             questionNumber += 1
         } else {
+            score = 0
             questionNumber = 0
         }
     }
